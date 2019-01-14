@@ -25,7 +25,10 @@ void Employee::promote()
 
 void Employee::demote()
 {
-    category--;
+    if (category > 0)
+        category--;
+    else
+        category = 0;
 }
 
 string Employee::getGender()
